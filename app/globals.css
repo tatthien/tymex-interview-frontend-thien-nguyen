@@ -1,10 +1,19 @@
+:root {
+  --container-width: 1540px;
+  --color-white: #fff;
+  --footer-bg: #17161a;
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 body {
+  font-family: var(--font-inter);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,4 +27,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
 }

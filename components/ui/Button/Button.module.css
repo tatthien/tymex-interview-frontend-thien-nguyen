@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0 1.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+  height: 2.5rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.primary {
+  color: var(--color-white);
+  background-image: linear-gradient(to right, #da458f, #da34dd);
+}
+
+.ghost {
+  color: var(--color-white);
+  background-color: transparent;
+}
+
+.icon {
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+}

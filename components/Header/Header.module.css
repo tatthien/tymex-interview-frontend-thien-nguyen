@@ -1,0 +1,49 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 1.625rem 0;
+  background-color: color(from #17161ab2 srgb r g b / 0.7);
+}
+
+.wrapper,
+.rightActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.connectWalletButton {
+  margin-right: 2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 3.75rem;
+}
+
+.navLink {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-white);
+}
+
+.activeNavLink {
+  background-image: linear-gradient(to right, #da458f, #da34dd);
+  color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.activeNavLink:before {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 2px;
+  background-image: linear-gradient(to right, #da458f, #da34dd);
+  bottom: -0.25rem;
+  left: 0.25rem;
+}
