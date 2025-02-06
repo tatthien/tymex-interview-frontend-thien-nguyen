@@ -27,11 +27,14 @@ export function useGetProductsQuery(queryParams?: QueryParams) {
           'Content-Type': 'application/json',
         },
       })
+
       if (!res.ok) {
-        return { success: false, data: null }
+        return null
       }
+
       const json = await res.json()
-      return { success: true, data: json as ListResponse<Product> }
+
+      return json as ListResponse<Product>
     },
     refetchInterval: 60 * 1000,
   })

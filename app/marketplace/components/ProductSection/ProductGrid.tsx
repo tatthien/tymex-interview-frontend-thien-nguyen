@@ -25,7 +25,7 @@ export function ProductGrid() {
 
   const [currentPage, setCurrentPage] = useState(1)
 
-  const { data, isLoading, isFetched } = useGetProductsQuery({
+  const { data, isLoading, isFetched, isError } = useGetProductsQuery({
     _page: currentPage.toString(),
     _per_page: '20',
   })
@@ -33,11 +33,11 @@ export function ProductGrid() {
   useEffect(() => {
     if (data?.data) {
       setPagination({
-        pages: data.data.pages,
-        items: data.data.items,
+        pages: data.pages,
+        items: data.items,
       })
 
-      setProducts((products) => [...products, ...data.data.data])
+      setProducts((products) => [...products, ...data.data])
     }
   }, [data])
 
@@ -59,6 +59,22 @@ export function ProductGrid() {
       .map((_, index) => (
         <ProductItemSkeleton key={`product-skeleton-${index}`} />
       ))
+  }
+
+  if (!isLoading && (!data || data?.data.length === 0)) {
+    return (
+      <div className={styles.nodata}>
+        <p>No products found</p>
+      </div>
+    )
+  }
+
+  if (isError) {
+    return (
+      <div className={styles.nodata}>
+        <p>Something went wrong! Please try again</p>
+      </div>
+    )
   }
 
   return (

@@ -32,3 +32,12 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+
+.nodata {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: var(--color-white);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
