@@ -11,7 +11,11 @@ export function ProductItem({ product }: { product: Product }) {
 
   return (
     <Link href={`/marketplace/${product.id}`}>
-      <div className={styles.wrapper} data-theme={product.theme.toLowerCase()}>
+      <div
+        className={styles.wrapper}
+        data-theme={product.theme.toLowerCase()}
+        data-testid="product-wrapper"
+      >
         <div>
           <div className={styles.imageWrapper}>
             <div className={styles.categoryWrapper}>
