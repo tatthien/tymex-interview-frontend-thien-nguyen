@@ -4,6 +4,8 @@ import { Barlow_Condensed, Inter } from 'next/font/google'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 
+import { Provider } from './provider'
+
 import './globals.css'
 
 const inter = Inter({
@@ -31,9 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${barlow.variable}`}>
-        <Header />
-        {children}
-        <Footer />
+        <Provider>
+          <Header />
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   )

@@ -1,0 +1,135 @@
+.wrapper {
+  background-color: #313b4580;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+
+  &:hover {
+    .image {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.imageWrapper {
+  --gradient-direction: to right;
+  border-radius: 0.25rem;
+  position: relative;
+  font-size: 0;
+  padding-top: 3rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.wrapper[data-theme='halloween'] {
+  .imageWrapper {
+    background-image: linear-gradient(to right, #dd5afe, #6366f1);
+  }
+}
+
+.wrapper[data-theme='colorful'] {
+  .imageWrapper {
+    background-image: linear-gradient(to right, #49dd81, #22b4c6);
+  }
+}
+
+.wrapper[data-theme='light'] {
+  .imageWrapper {
+    background-image: linear-gradient(to right, #fe5a5a, #f163d2);
+  }
+}
+
+.wrapper[data-theme='dark'] {
+  .imageWrapper {
+    background-image: linear-gradient(to right, #fe955a, #f1da63);
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+  transform-origin: center bottom;
+}
+
+.categoryWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #313b4580;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.price {
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.currencySymbol {
+  width: 0.5rem;
+  height: auto;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-self: flex-end;
+}
+
+.authorAvatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background-color: var(--color-white);
+  overflow: hidden;
+  position: relative;
+}
+
+.authorAvatar img {
+  width: 100%;
+  height: auto;
+}
+
+.authorName {
+  font-size: 0.75rem;
+  font-weight: 500;
+}

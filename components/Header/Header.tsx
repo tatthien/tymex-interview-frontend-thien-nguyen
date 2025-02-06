@@ -68,14 +68,11 @@ export function Header() {
             </nav>
 
             {/* Mobile */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className={styles.mobileNavButton}
-              onClick={openMobileNav}
-            >
-              <IconMenu />
-            </Button>
+            <div className={styles.mobileNavButton}>
+              <Button variant="ghost" size="icon" onClick={openMobileNav}>
+                <IconMenu />
+              </Button>
+            </div>
 
             <div className={styles.drawer} data-opened={mobileNavOpened}>
               <Button

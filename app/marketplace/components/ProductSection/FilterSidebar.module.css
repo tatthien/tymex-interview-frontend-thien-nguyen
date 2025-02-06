@@ -1,0 +1,16 @@
+.root {
+  position: sticky;
+  top: 10rem;
+}
+
+.formStack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,15 @@
+.root {
+  background-color: #11171f;
+  animation: skimmer infinite 1.5s linear;
+}
+
+@keyframes skimmer {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
