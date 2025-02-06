@@ -10,6 +10,7 @@
   height: 2.5rem;
   cursor: pointer;
   font-family: inherit;
+  white-space: nowrap;
 }
 
 .primary {

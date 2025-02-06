@@ -1,0 +1,90 @@
+.footer {
+  background-color: var(--footer-bg);
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  color: var(--color-white);
+}
+
+.divider {
+  border-color: #3a3841;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.copyrightSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @media (min-width: 48rem) {
+    justify-content: space-between;
+  }
+}
+
+.legalNav {
+  display: flex;
+  align-items: center;
+  gap: 3.75rem;
+}
+
+.sections {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  gap: 2rem;
+}
+
+.section {
+  width: 100%;
+
+  @media (min-width: 48rem) {
+    width: auto;
+  }
+}
+
+.section h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-barlow);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.emailInput {
+  flex: 1;
+
+  @media (min-width: 48rem) {
+    width: 25rem;
+  }
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.contactItem:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.navList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 3rem;
+  row-gap: 0.5rem;
+
+  @media (min-width: 40rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

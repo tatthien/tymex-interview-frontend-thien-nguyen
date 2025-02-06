@@ -38,6 +38,8 @@
   gap: 5rem;
   width: 100%;
   flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 .nftCard {
@@ -46,6 +48,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  z-index: 100;
 }
 
 .nftCardImageWrapper {
@@ -83,7 +86,8 @@
 
 .nftCardName {
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 700;
+  font-family: var(--font-barlow);
   text-align: center;
   text-transform: uppercase;
 }
@@ -101,6 +105,11 @@
   overflow: hidden;
   width: var(--nft-card-featured-size);
   height: var(--nft-card-featured-size);
+  display: none;
+
+  @media (min-width: 64rem) {
+    display: block;
+  }
 }
 
 .nftCardFeaturedImage {

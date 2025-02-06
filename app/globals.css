@@ -2,6 +2,11 @@
   --container-width: 1540px;
   --color-white: #fff;
   --footer-bg: #17161a;
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
 }
 
 html,
@@ -22,6 +27,12 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+*:focus {
+  outline-width: 2px;
+  outline-color: var(--color-white);
+  outline-style: solid;
 }
 
 a {

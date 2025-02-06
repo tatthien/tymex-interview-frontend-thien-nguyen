@@ -20,14 +20,19 @@
 }
 
 .nav {
-  display: flex;
+  display: none;
   gap: 3.75rem;
+
+  @media (min-width: 64rem) {
+    display: flex;
+  }
 }
 
 .navLink {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.875rem;
+  font-family: var(--font-barlow);
   color: var(--color-white);
 }
 
@@ -46,4 +51,39 @@
   background-image: linear-gradient(to right, #da458f, #da34dd);
   bottom: -0.25rem;
   left: 0.25rem;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--footer-bg);
+  z-index: 9999;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer[data-opened='true'] {
+  transform: translateX(0);
+}
+
+.drawerClose {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.mobileNav {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.mobileNavButton {
+  @media (min-width: 64rem) {
+    display: none;
+  }
 }
