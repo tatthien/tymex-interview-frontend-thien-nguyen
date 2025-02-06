@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { IconGlobe } from '@/components/icons/IconGlobe'
+import { IconHeart } from '@/components/icons/IconHeart'
 import { Button } from '@/components/ui/Button'
 import { getImageUrl } from '@/helpers/getImageUrl'
 import type { Product } from '@/types/product'
@@ -22,7 +22,7 @@ export function ProductItem({ product }: { product: Product }) {
             <div className={styles.categoryWrapper}>
               <span className={styles.category}>{product.category}</span>
               <Button variant="ghost" size="icon">
-                <IconGlobe />
+                <IconHeart />
               </Button>
             </div>
             <img
