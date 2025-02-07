@@ -43,16 +43,12 @@ export function RangeSlider({
       const percentage = position / width
       const value = Math.round((percentage * (max - min) + min) / step) * step
 
-      if (isDragging === 'left') {
-        if (value < rightValue) {
-          setLeftValue(value)
-          onChange?.({ min: value, max: rightValue })
-        }
-      } else if (isDragging === 'right') {
-        if (value > leftValue) {
-          setRightValue(value)
-          onChange?.({ min: leftValue, max: value })
-        }
+      if (isDragging === 'left' && value < rightValue) {
+        setLeftValue(value)
+        onChange?.({ min: value, max: rightValue })
+      } else if (isDragging === 'right' && value > leftValue) {
+        setRightValue(value)
+        onChange?.({ min: leftValue, max: value })
       }
     },
     [isDragging, leftValue, rightValue, min, max, step, onChange]
@@ -69,10 +65,10 @@ export function RangeSlider({
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      if (isDragging) {
-        e.preventDefault()
-        updatePosition(e.clientX)
-      }
+      if (!isDragging) return
+
+      e.preventDefault()
+      updatePosition(e.clientX)
     }
 
     const handleMouseUp = () => {
