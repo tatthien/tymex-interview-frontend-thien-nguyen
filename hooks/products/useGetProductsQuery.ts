@@ -21,17 +21,21 @@ export function useGetProductsQuery(queryParams?: GetProductsQueryParams) {
         {
           _page: '1',
           _per_page: '20',
+          _sort: '-createdAt',
         },
-        queryParams
+        queryParams ? removeUndefined(queryParams) : {}
       )
 
-      const queryStr = new URLSearchParams(removeUndefined(params)).toString()
+      const queryStr = new URLSearchParams(params).toString()
 
-      const res = await fetch(`http://localhost:5005/products?${queryStr}`, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_API_URL}/products?${queryStr}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
 
       if (!res.ok) {
         return null
