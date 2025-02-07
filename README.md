@@ -1,6 +1,6 @@
 # tymex-interview-frontend-thien-nguyen
 
-Tymex's frontend interview project. Live demo: https://tymex-interview-frontend-thien-nguyen.vercel.app/
+Tymex's frontend interview project. Live demo: https://tymex-interview-frontend-thien-nguyen.vercel.app/marketplace
 
 ## Installation
 
