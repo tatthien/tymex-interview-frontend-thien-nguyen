@@ -11,6 +11,7 @@
   cursor: pointer;
   font-family: inherit;
   white-space: nowrap;
+  gap: 0.25rem;
 }
 
 .primary {

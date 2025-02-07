@@ -100,8 +100,8 @@ export function Wave() {
           y2="57.789"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="c"
@@ -111,8 +111,8 @@ export function Wave() {
           y2="80.421"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="d"
@@ -122,8 +122,8 @@ export function Wave() {
           y2="103.415"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="e"
@@ -133,8 +133,8 @@ export function Wave() {
           y2="126.667"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="f"
@@ -144,8 +144,8 @@ export function Wave() {
           y2="150.317"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="g"
@@ -155,8 +155,8 @@ export function Wave() {
           y2="174.529"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="h"
@@ -166,8 +166,8 @@ export function Wave() {
           y2="199.249"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="i"
@@ -177,8 +177,8 @@ export function Wave() {
           y2="224.632"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="j"
@@ -188,8 +188,8 @@ export function Wave() {
           y2="250.959"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="k"
@@ -199,8 +199,8 @@ export function Wave() {
           y2="278.242"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="l"
@@ -210,8 +210,8 @@ export function Wave() {
           y2="306.973"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="m"
@@ -221,8 +221,8 @@ export function Wave() {
           y2="337.385"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="n"
@@ -232,8 +232,8 @@ export function Wave() {
           y2="370.04"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="o"
@@ -243,8 +243,8 @@ export function Wave() {
           y2="405.976"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="p"
@@ -254,8 +254,8 @@ export function Wave() {
           y2="446.226"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="q"
@@ -265,8 +265,8 @@ export function Wave() {
           y2="493.04"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="r"
@@ -276,8 +276,8 @@ export function Wave() {
           y2="550.698"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="s"
@@ -287,8 +287,8 @@ export function Wave() {
           y2="625.618"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="t"
@@ -298,8 +298,8 @@ export function Wave() {
           y2="734.134"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="u"
@@ -309,8 +309,8 @@ export function Wave() {
           y2="919.451"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="v"
@@ -320,8 +320,8 @@ export function Wave() {
           y2="1318.02"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <linearGradient
           id="w"
@@ -331,8 +331,8 @@ export function Wave() {
           y2="968.931"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#DD5AFE" />
-          <stop offset="1" stop-color="#6366F1" />
+          <stop stopColor="#DD5AFE" />
+          <stop offset="1" stopColor="#6366F1" />
         </linearGradient>
         <clipPath id="a">
           <path fill="#fff" transform="translate(-347)" d="M0 0h2624v418H0z" />

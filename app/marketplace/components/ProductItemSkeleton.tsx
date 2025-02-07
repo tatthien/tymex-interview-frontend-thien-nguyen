@@ -1,6 +1,6 @@
 import { Skeleton } from '@/components/ui/Skeleton'
 
-import styles from './ProductItem.module.css'
+import styles from './ProductItem/ProductItem.module.css'
 
 export function ProductItemSkeleton() {
   return (

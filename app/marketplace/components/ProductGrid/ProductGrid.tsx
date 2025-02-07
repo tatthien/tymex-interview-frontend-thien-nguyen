@@ -1,17 +1,23 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { Button } from '@/components/ui/Button'
-import { useGetProductsQuery } from '@/hooks/products/useGetProductsQuery'
-import { Product } from '@/types/product'
+import {
+  GetProductsQueryParams,
+  useGetProductsQuery,
+} from '@/hooks/products/useGetProductsQuery'
+import type { Product } from '@/types/product'
 
-import { ProductItem } from './ProductItem'
-import { ProductItemSkeleton } from './ProductItemSkeleton'
+import { useProductFilter } from '../../providers/useProductFilter'
+import { ProductItem } from '../ProductItem'
+import { ProductItemSkeleton } from '../ProductItemSkeleton'
 
 import styles from './ProductGrid.module.css'
 
 export function ProductGrid() {
+  const { query } = useProductFilter()
+
   const [products, setProducts] = useState<Product[]>([])
   const [pagination, setPagination] = useState<{
     pages: number
@@ -20,16 +26,29 @@ export function ProductGrid() {
     pages: 0,
     items: 0,
   })
-
   const [isLoadingMore, setIsLoadingMore] = useState(false)
-
   const [currentPage, setCurrentPage] = useState(1)
 
-  const { data, isLoading, isFetched, isError } = useGetProductsQuery({
-    _page: currentPage.toString(),
-    _per_page: '20',
-  })
+  const filterParams = useMemo(() => {
+    const localQuery: GetProductsQueryParams = {
+      _page: currentPage.toString(),
+      _per_page: '20',
+    }
 
+    localQuery.category = query.category || undefined
+    localQuery.tier = query.tier || undefined
+    localQuery.theme = query.theme || undefined
+    localQuery._sort = query._sort || undefined
+
+    return localQuery
+  }, [query, currentPage])
+
+  const { data, isLoading, isFetched, isError } =
+    useGetProductsQuery(filterParams)
+
+  // Update products data
+  // If is loading more, add new products to the end of the list
+  // If is not loading more, replace the products
   useEffect(() => {
     if (data?.data) {
       setPagination({
@@ -37,13 +56,21 @@ export function ProductGrid() {
         items: data.items,
       })
 
-      setProducts((products) => [...products, ...data.data])
+      setProducts((products) =>
+        isLoadingMore ? [...products, ...data.data] : [...data.data]
+      )
     }
   }, [data])
 
+  // Reset loading more when new data is fetched
   useEffect(() => {
     if (isFetched) setIsLoadingMore(false)
   }, [isFetched])
+
+  // Reset current page when filters changed
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [query])
 
   const handleLoadMore = () => {
     setIsLoadingMore(true)

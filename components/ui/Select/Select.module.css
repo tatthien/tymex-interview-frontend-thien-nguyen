@@ -1,0 +1,29 @@
+.input {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 0.25rem;
+  height: calc(2.5rem - 2px);
+  padding: 0 1.25rem;
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+  font-size: 1rem;
+  appearance: none;
+  background: transparent
+    url('data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M18.2682%208.70713C17.8777%208.3166%2017.2445%208.31659%2016.854%208.70712L12.7682%2012.7929C12.3777%2013.1834%2011.7445%2013.1834%2011.354%2012.7929L7.2682%208.70711C6.87768%208.31658%206.24451%208.31658%205.85399%208.7071L5.70722%208.85387C5.31668%209.24441%205.3167%209.87762%205.70727%2010.2681L11.354%2015.9141C11.7445%2016.3045%2012.3776%2016.3045%2012.7681%2015.9141L18.4149%2010.2681C18.8054%209.87761%2018.8055%209.24441%2018.4149%208.85387L18.2682%208.70713Z%22%20fill%3D%22white%22%2F%3E%3C%2Fsvg%3E')
+    no-repeat right 10px center;
+  background-size: 24px;
+  padding-right: 30px;
+}
+
+.input::placeholder {
+  color: #89888b;
+}
+
+.label {
+  color: #89888b;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}

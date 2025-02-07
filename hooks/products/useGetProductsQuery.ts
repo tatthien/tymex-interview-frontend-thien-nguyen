@@ -1,17 +1,22 @@
+import { removeUndefined } from '@/helpers/removeUndefined'
 import type { ListResponse } from '@/types'
 import type { Product } from '@/types/product'
 import { useQuery } from '@tanstack/react-query'
 
-type QueryParams = {
+export type GetProductsQueryParams = {
   _page?: string
   _per_page?: string
+  _sort?: string
+  tier?: string
+  theme?: string
+  category?: string
 }
 
-export function useGetProductsQuery(queryParams?: QueryParams) {
+export function useGetProductsQuery(queryParams?: GetProductsQueryParams) {
   return useQuery({
     queryKey: ['products', queryParams],
     queryFn: async () => {
-      const params: QueryParams = Object.assign(
+      const params: GetProductsQueryParams = Object.assign(
         {},
         {
           _page: '1',
@@ -20,7 +25,7 @@ export function useGetProductsQuery(queryParams?: QueryParams) {
         queryParams
       )
 
-      const queryStr = new URLSearchParams(params).toString()
+      const queryStr = new URLSearchParams(removeUndefined(params)).toString()
 
       const res = await fetch(`http://localhost:5005/products?${queryStr}`, {
         headers: {

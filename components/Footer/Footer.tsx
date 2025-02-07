@@ -33,15 +33,15 @@ const links = [
     label: 'Whitepaper',
   },
   {
-    href: '#',
+    href: '#faqs',
     label: 'FAQs',
   },
   {
-    href: '#',
+    href: '#news',
     label: 'News',
   },
   {
-    href: '#',
+    href: '#community',
     label: 'Community',
   },
 ]
