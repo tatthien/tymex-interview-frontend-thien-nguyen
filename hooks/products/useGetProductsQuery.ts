@@ -10,6 +10,8 @@ export type GetProductsQueryParams = {
   tier?: string
   theme?: string
   category?: string
+  price_gte?: string
+  price_lte?: string
 }
 
 export function useGetProductsQuery(queryParams?: GetProductsQueryParams) {

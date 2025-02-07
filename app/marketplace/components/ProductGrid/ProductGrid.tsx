@@ -39,6 +39,8 @@ export function ProductGrid() {
     localQuery.tier = query.tier || undefined
     localQuery.theme = query.theme || undefined
     localQuery._sort = query._sort || undefined
+    localQuery.price_gte = query.price_gte || undefined
+    localQuery.price_lte = query.price_lte || undefined
 
     return localQuery
   }, [query, currentPage])

@@ -4,6 +4,7 @@ import { type FormEvent, useState } from 'react'
 
 import { IconResetFilter } from '@/components/icons/IconResetFilter'
 import { Button } from '@/components/ui/Button'
+import { RangeSlider } from '@/components/ui/RangeSlider'
 import { Select } from '@/components/ui/Select'
 import { TextInput } from '@/components/ui/TextInput'
 
@@ -16,6 +17,8 @@ const DEFAULT_FORM_VALUE = {
   theme: '',
   time: 'desc',
   price: '',
+  priceFrom: 0.01,
+  priceTo: 200,
 }
 
 const getSort = (time: string, price: string) => {
@@ -43,13 +46,37 @@ export function FilterSidebar() {
         tier: formValue.tier,
         theme: formValue.theme,
         _sort: getSort(formValue.time, formValue.price),
+        price_gte: formValue.priceFrom.toString(),
+        price_lte: formValue.priceTo.toString(),
       },
     }))
   }
 
   const handleReset = () => {
     setFormValue(DEFAULT_FORM_VALUE)
-    setQuery((query) => ({ ...query, ...DEFAULT_FORM_VALUE, ...{ _sort: '' } }))
+    setQuery((query) => ({
+      ...query,
+      ...DEFAULT_FORM_VALUE,
+      ...{
+        _sort: '',
+        price_gte: DEFAULT_FORM_VALUE.priceFrom.toString(),
+        price_lte: DEFAULT_FORM_VALUE.priceTo.toString(),
+      },
+    }))
+  }
+
+  const handlePriceSliderChange = ({
+    min,
+    max,
+  }: {
+    min: number
+    max: number
+  }) => {
+    setFormValue((formValue) => ({
+      ...formValue,
+      priceFrom: min,
+      priceTo: max,
+    }))
   }
 
   return (
@@ -57,6 +84,16 @@ export function FilterSidebar() {
       <form onSubmit={handleSubmit}>
         <div className={styles.formStack}>
           <TextInput type="search" placeholder="Quick search" />
+          <RangeSlider
+            label="price"
+            minLabel="0.01 ETH"
+            maxLabel="200 ETH"
+            step={0.01}
+            min={0.01}
+            max={200}
+            value={{ min: formValue.priceFrom, max: formValue.priceTo }}
+            onChange={handlePriceSliderChange}
+          />
           <div className={styles.fieldGroup}>
             <Select
               label="Tier"

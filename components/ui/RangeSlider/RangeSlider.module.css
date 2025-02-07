@@ -1,0 +1,79 @@
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  color: #89888b;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.track {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background-color: #3a3841;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.bar {
+  position: absolute;
+  height: 100%;
+  background-color: #da458f;
+  border-radius: 2px;
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: 2px solid #da458f;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  transition: box-shadow 0.2s;
+}
+
+.thumb:hover,
+.thumb:focus {
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.thumb:active {
+  cursor: grabbing;
+}
+
+.minMaxLabel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #d6d6d6;
+  font-weight: 600;
+}
+
+.floatingLabel {
+  background-color: #da458f;
+  color: #fff;
+  position: absolute;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 10px));
+  opacity: 0;
+}
+
+.root:hover .floatingLabel {
+  opacity: 1;
+}

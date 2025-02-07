@@ -7,6 +7,8 @@ export type ProductFilterQuery = {
   tier?: string
   theme?: string
   _sort?: string
+  price_gte?: string
+  price_lte?: string
 }
 
 export type ProductFilterContextType = {
