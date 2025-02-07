@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import cx from 'clsx'
 
 import styles from '@/components/ui/Button/Button.module.css'
@@ -15,9 +16,9 @@ export default function Home() {
       }}
     >
       <div className="container">Coming soon</div>
-      <a href="/marketplace" className={cx(styles.root, styles.primary)}>
+      <Link href="/marketplace" className={cx(styles.root, styles.primary)}>
         Visit Marketplace
-      </a>
+      </Link>
     </div>
   )
 }
